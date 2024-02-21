@@ -95,7 +95,7 @@ export default class ProductController {
             const image = req.file.filename;
 
             // Constructing the full image URL
-            const imageFullPath = `http://localhost:${process.env.PORT}/uploads/${image}`;
+            const imageFullPath = `https://epic-emporium-backend.onrender.com/uploads/${image}`;
 
             // Creating a new product object with the updated image URL
             const productObj = { ...req.body, image: imageFullPath }
