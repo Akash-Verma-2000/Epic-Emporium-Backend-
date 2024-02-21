@@ -71,7 +71,7 @@ export default class ProductController {
             const image = req.file.filename;
 
             // Constructing the full image URL
-            const imageFullPath = `http://localhost:${process.env.PORT}/uploads/${image}`; // Modify this to match your server URL
+            const imageFullPath = `https://epic-emporium-backend.onrender.com/uploads/${image}`; // Modify this to match your server URL
 
             // Creating a new product object with the image URL and the logged-in user's ID
             const productObj = { ...req.body, image: imageFullPath, productOwner: new mongoose.Types.ObjectId(loggedInUserID) }
